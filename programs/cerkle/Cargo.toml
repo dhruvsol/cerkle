@@ -1,0 +1,23 @@
+[package]
+name = "cerkle"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "cerkle"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+light-hasher = { version = "0.6.0", features = ["solana"] }
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+light-concurrent-merkle-tree = { version = "0.6.0", features = ["solana"] }
+solana-program = { workspace = true, optional = true }
